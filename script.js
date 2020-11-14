@@ -24,7 +24,15 @@ $(document).ready(function () {
         getLocalStorage(i);
 }})
 
-function updateColor(){}
+function updateColor(){
+    var currentTime = new Date().getHours();
+    for (var i = 9; i < 18; i++) { 
+    console.log(currentTime, $(`#${i}`).data("time"));
+     if ($(`#${i}`).data("time") == currentTime){
+        $(`#text${i}`).addClass( "present");
+    } else if (currentTime < $(`#${i}`).data("time")) {
+        $(`#text${i}`).addClass( "future");
+}}
 
 var saveBtn = $('.saveBtn');
-saveBtn.on('click', function(){})
+saveBtn.on('click', function(){})}
