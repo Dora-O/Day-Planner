@@ -4,3 +4,10 @@ function getLocalStorage(key) {
         $(`#text${key}`).text(value);
     }
 }
+
+$(document).ready(function () {})
+
+function updateColor(){}
+
+var saveBtn = $('.saveBtn');
+saveBtn.on('click', function(){})
