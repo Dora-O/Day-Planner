@@ -27,14 +27,21 @@ $(document).ready(function () {
     function updateColors() {
         var currentTime = new Date().getHours();
         for (var i = 9; i < 18; i++) {
-            console.log(currentTime, $(`#${i}`).data("time"));
+            
             if ($(`#${i}`).data("time") == currentTime) {
                 $(`#text${i}`).addClass("present");
             }
             else if (currentTime < $(`#${i}`).data("time")) {
                 $(`#text${i}`).addClass("future");
             }
-        }}
+            else (currentTime < $(`#${i}`).data("time")) 
+                $(`#text${i}`).addClass("past");
+          
+        }
+    }
+    setInterval(
+        updateColors, 1000)
+
 
     function formatAMPM(hours) {
         var ampm = hours >= 12 ? 'pm' : 'am';
@@ -44,15 +51,11 @@ $(document).ready(function () {
     }
     formatAMPM();
 
-    setInterval(function () {
-            updateColors();
-        }, 1000);
-
-
     var saveBtn = $('.saveBtn');
     saveBtn.on('click', function () {
         let eventId = $(this).attr('id');
         let eventText = $(this).parent().siblings().children('.description').val();
-        localStorage.setItem(eventId, eventText); })
-    }
+        localStorage.setItem(eventId, eventText);
+    })
+}
 )
