@@ -7,6 +7,6 @@ This event will be saved in local storage and will still be there even if the us
 
 Created using HTML, CSS and JavaScript.
 
-Screenshot of deployed site will be provided.
+Screenshot of deployed site will be provided. (/calendar-screenshot.png)
 
 Link to deployed site: https://dora-o.github.io/Day-Planner/.
