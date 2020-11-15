@@ -34,5 +34,16 @@ function updateColor(){
         $(`#text${i}`).addClass( "future");
 }}
 
+function formatAMPM(hours) {
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    return hours + ampm;
+}
+formatAMPM();
+
+
+
+
 var saveBtn = $('.saveBtn');
 saveBtn.on('click', function(){})}
